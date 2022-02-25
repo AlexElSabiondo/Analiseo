@@ -1,285 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Analiseo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="analiseo.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Analiseo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="analiseo.css">
+  <script src="./analiseo.js" defer></script>
 </head>
+
 <body>
 
-    <img src="./logo.png" width="400" height="300" style="margin-top: 2rem">
+  <img src="./logo.png" width="400" height="300" style="margin-top: 2rem">
 
-    <form id="regForm" action="">
-        <!-- One "tab" for each step in the form: -->
-        <div class="tab">
-            <h3>Título</h3>
-            <input class="inputText" type="text" placeholder="Google">
+  <form id="regForm" action="">
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab">
+      <h3>Nombre de su web</h3>
+      <input class="inputText" type="text" placeholder="Google">
 
-            <h5 class="mt-4">¿Contiene la palabra clave?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿El nombre de dominio de su página contiene la palabra clave?</h5>
+      <input type="radio" name="urlPClave" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
-        </div>
-        <div class="tab">
-            <h3 class="mt-4">Descripción breve</h3>
-            <input class="inputText mt-2" type="text" placeholder="Es un buscador...">
-        </div>
+      <input class="inputRadio" type="radio" name="urlPClave" value="no">
+      <label for="no">No</label>
+    </div>
+    <div class="tab">
+      <h3 class="mt-4">Descripción breve</h3>
+      <input class="inputText mt-2" type="text" placeholder="Es un buscador...">
+    </div>
 
-        <div class="tab">
-            <h3>URL</h3>
-            <h5 class="mt-4">¿Son cortas?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+    <div class="tab">
+      <h3>URL</h3>
+      <h5 class="mt-4">¿Las URL de su página son cortas?</h5>
+      <input type="radio" name="urlCortas" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="urlCortas" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Son descriptivas?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Son descriptivas?</h5>
+      <input type="radio" name="urlDescriptivas" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="urlDescriptivas" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Cada URL tiene un contenido diferenciado?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Cada URL tiene un contenido diferenciado?</h5>
+      <input type="radio" name="urlContDiferente" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
-        </div>
+      <input class="inputRadio" type="radio" name="urlContDiferente" value="no">
+      <label for="no">No</label>
+    </div>
 
-        <div class="tab">
-            <h3>Headings</h3>
-            <h5 class="mt-4">¿Hay más de un heading principal por página?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+    <div class="tab">
+      <h3>Headings</h3>
+      <h5 class="mt-4">¿Hay más de un heading principal por página?</h5>
+      <input type="radio" name="masDeUnH1" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="masDeUnH1" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Hay un orden adecuado al usar distintos tamaños de headings?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Hay un orden adecuado al usar distintos tamaños de headings?</h5>
+      <input type="radio" name="ordenH1" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
-        </div>
+      <input class="inputRadio" type="radio" name="ordenH1" value="no">
+      <label for="no">No</label>
+    </div>
 
-        <div class="tab">
-            <h3>Imagenes</h3>
-            <h5 class="mt-4">¿Tienen un nombre descriptivo?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+    <div class="tab">
+      <h3>Imagenes</h3>
+      <h5 class="mt-4">¿Tienen un nombre descriptivo?</h5>
+      <input type="radio" name="imgNombreDescript" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="imgNombreDescript" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Tienen un 'alt'?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Tienen un 'alt'?</h5>
+      <input type="radio" name="imgAlt" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="imgAlt" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Tienen un título?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Tienen un título?</h5>
+      <input type="radio" name="imgTitle" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
-        </div>
+      <input class="inputRadio" type="radio" name="imgTitle" value="no">
+      <label for="no">No</label>
+    </div>
 
-        <div class="tab">
-            <h3>Links internos</h3>
-            <h5 class="mt-4">¿Cada url contiene al menos un enlace interno?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+    <div class="tab">
+      <h3>Links internos</h3>
+      <h5 class="mt-4">Cada URL interna enlaza a otra URL dentro de tu web?</h5>
+      <input type="radio" name="urlInternaEnlaza" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
-        </div>
+      <input class="inputRadio" type="radio" name="urlInternaEnlaza" value="no">
+      <label for="no">No</label>
+    </div>
 
-        <div class="tab">
-            <h3>HTML</h3>
-            <h5 class="mt-4">¿Tiene texto en negrita? (strong)</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+    <div class="tab">
+      <h3>HTML</h3>
+      <h5 class="mt-4">¿Tiene texto en negrita? (strong)</h5>
+      <input type="radio" name="textoEnNegrita" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="textoEnNegrita" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Tiene texto en cursiva? (em)</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Tiene texto en cursiva? (em)</h5>
+      <input type="radio" name="textoEnCursiva" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="textoEnCursiva" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Tiene listados? (ul / ol)</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Tiene listados? (ul / ol)</h5>
+      <input type="radio" name="tieneListados" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
-        </div>
+      <input class="inputRadio" type="radio" name="tieneListados" value="no">
+      <label for="no">No</label>
+    </div>
 
-        <div class="tab">
-            <h3>Velocidad de carga</h3>
-            <h5 class="mt-4">¿Cuánto tarda en cargar la página?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Más de 1 segundo</label>
+    <div class="tab">
+      <h3>Velocidad de carga</h3>
+      <h5 class="mt-4">¿Cuánto tarda en cargar la página?</h5>
+      <input type="radio" name="tiempoDeCarga" value="no">
+      <label for="no">Más de 1 segundo</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">Menos de 1 segundo</label>
-        </div>
+      <input class="inputRadio" type="radio" name="tiempoDeCarga" value="si">
+      <label for="si">Menos de 1 segundo</label>
+    </div>
 
-        <div class="tab">
-            <h3>HTML</h3>
-            <h5 class="mt-4">¿Está demasiado cargada de texto?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+    <div class="tab">
+      <h3>HTML</h3>
+      <h5 class="mt-4">Tiene mucho texto?</h5>
+      <input type="radio" name="muchoTexto" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="muchoTexto" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Cómo es el contenido?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Pocos espacios libres y muy recargado</label>
+      <h5 class="mt-4">¿Cómo es el contenido?</h5>
+      <input type="radio" name="tipoContenido" value="siRecargado">
+      <label for="siRecargado">Pocos espacios libres y muy recargado</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">Limpio y claro, no se ve sobrecargado</label>
+      <input class="inputRadio" type="radio" name="tipoContenido" value="noRecargado">
+      <label for="noRecargado">Limpio y claro, no se ve sobrecargado</label>
 
-            <h5 class="mt-4">¿Hay contenido oculto?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Hay contenido oculto?</h5>
+      <input type="radio" name="contenidoOcult" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="contenidoOcult" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Hay contenido copiado?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Hay contenido copiado?</h5>
+      <input type="radio" name="contenidoCopiado" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="contenidoCopiado" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿Se repite la palabra clave muchas veces?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿Se repite la palabra clave muchas veces?</h5>
+      <input type="radio" name="pClaveRepe" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
+      <input class="inputRadio" type="radio" name="pClaveRepe" value="no">
+      <label for="no">No</label>
 
-            <h5 class="mt-4">¿El mensaje que se quiere transmitir es claro y conciso?</h5>
-            <input type="radio" name="" value="si">
-            <label for="">Sí</label>
+      <h5 class="mt-4">¿El mensaje que se quiere transmitir es claro y conciso?</h5>
+      <input type="radio" name="mensajeClaro" value="si">
+      <label for="si">Sí</label>
 
-            <input class="inputRadio" type="radio" name="" value="no">
-            <label for="">No</label>
-        </div>
+      <input class="inputRadio" type="radio" name="mensajeClaro" value="no">
+      <label for="no">No</label>
+    </div>
 
 
-        <div style="overflow:auto;">
-            <div style="float:right;">
-                <button class="mt-4" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-            </div>
-        </div>
-        <!-- Circles which indicates the steps of the form: -->
-        <div style="text-align:center;margin-top:40px;">
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-        </div>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button class="mt-4" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
 
-      </form>
-      
-      <script>
-      var currentTab = 0; // Current tab is set to be the first tab (0)
-      showTab(currentTab); // Display the current tab
-      
-      function showTab(n) {
-        // This function will display the specified tab of the form...
-        var x = document.getElementsByClassName("tab");
-        x[n].style.display = "block";
-        //... and fix the Previous/Next buttons:
-        if (n == 0) {
-          document.getElementById("prevBtn").style.display = "none";
-        } else {
-          document.getElementById("prevBtn").style.display = "inline";
-        }
-        if (n == (x.length - 1)) {
-          document.getElementById("nextBtn").innerHTML = "Submit";
-        } else {
-          document.getElementById("nextBtn").innerHTML = "Next";
-        }
-        //... and run a function that will display the correct step indicator:
-        fixStepIndicator(n)
-      }
-      
-      function nextPrev(n) {
-        // This function will figure out which tab to display
-        var x = document.getElementsByClassName("tab");
-        // Exit the function if any field in the current tab is invalid:
-        if (n == 1 && !validateForm()) return false;
-        // Hide the current tab:
-        x[currentTab].style.display = "none";
-        // Increase or decrease the current tab by 1:
-        currentTab = currentTab + n;
-        // if you have reached the end of the form...
-        if (currentTab >= x.length) {
-          // ... the form gets submitted:
-          document.getElementById("regForm").submit();
-          return false;
-        }
-        // Otherwise, display the correct tab:
-        showTab(currentTab);
-      }
-      
-      function validateForm() {
-        // This function deals with validation of the form fields
-        var x, y, i, valid = true;
-        x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
-        // A loop that checks every input field in the current tab:
-        for (i = 0; i < y.length; i++) {
-          // If a field is empty...
-          if (y[i].value == "") {
-            // add an "invalid" class to the field:
-            y[i].className += " invalid";
-            // and set the current valid status to false
-            valid = false;
-          }
-        }
-        // If the valid status is true, mark the step as finished and valid:
-        if (valid) {
-          document.getElementsByClassName("step")[currentTab].className += " finish";
-        }
-        return valid; // return the valid status
-      }
-      
-      function fixStepIndicator(n) {
-        // This function removes the "active" class of all steps...
-        var i, x = document.getElementsByClassName("step");
-        for (i = 0; i < x.length; i++) {
-          x[i].className = x[i].className.replace(" active", "");
-        }
-        //... and adds the "active" class on the current step:
-        x[n].className += " active";
-      }
-      </script>
-    
-    
+  </form>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
 </body>
+
 </html>
